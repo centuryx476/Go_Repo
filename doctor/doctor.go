@@ -195,3 +195,5 @@ func Response(userInput string) string {
 
 	return output
 }
+
+// End of Line
