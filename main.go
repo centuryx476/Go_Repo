@@ -1,5 +1,6 @@
 package main // This can be named whatever you want
 
+// Importing multiple
 import (
 	"fmt"
 	"myapp/doctor"
