@@ -10,12 +10,17 @@ import (
 
 // Func has to be named 'main'
 func main() {
-	// Read input from user
+	// Variable to read input from user
 	reader := bufio.NewReader(os.Stdin)
 
 	whatToSay := doctor.Intro()
-
 	fmt.Println(whatToSay)
+
+	// Actually reading input from user (Only one word it can read with \n)
+	userInput, _ := reader.ReadString('\n')
+
+	// Output the userInput
+	fmt.Println(userInput)
 }
 
 // End of Line
