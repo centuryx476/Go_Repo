@@ -16,11 +16,14 @@ func main() {
 	whatToSay := doctor.Intro()
 	fmt.Println(whatToSay)
 
-	// Actually reading input from user (Only one word it can read with \n)
-	userInput, _ := reader.ReadString('\n')
+	// In Go there is only one type of Loop (To get multiple inputs)
+	for {
+		// Actually reading input from user (Only one word it can read with \n)
+		userInput, _ := reader.ReadString('\n')
 
-	// Output the userInput
-	fmt.Println(userInput)
+		// Output the userInput
+		fmt.Println(userInput)
+	}
 }
 
 // End of Line
