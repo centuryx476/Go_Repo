@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"myapp/doctor"
 	"os"
+	"strings"
 )
 
 // Func has to be named 'main'
@@ -24,11 +25,17 @@ func main() {
 		// Actually reading input from user (Only one word it can read with \n)
 		userInput, _ := reader.ReadString('\n')
 
-		// Call eliza function with userInput
-		response := doctor.Response(userInput)
+		// This helps make the break from the loop
+		userInput = strings.Replace(userInput, "\r\n", "", -1) // Replace return for Windows
+		userInput = strings.Replace(userInput, "\n", "", -1)   // Replace return for everything else
 
-		// Output the response from eliza
-		fmt.Println(response)
+		// Checking for 'quit' so we can exit loop
+		if userInput == "quit" {
+			break
+		} else {
+			// Output the response from eliza
+			fmt.Println(doctor.Response(userInput))
+		}
 	}
 }
 
