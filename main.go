@@ -18,6 +18,9 @@ func main() {
 
 	// In Go there is only one type of Loop (To get multiple inputs)
 	for {
+		// Adding a little prompt for the screen
+		fmt.Print("-> ")
+
 		// Actually reading input from user (Only one word it can read with \n)
 		userInput, _ := reader.ReadString('\n')
 
