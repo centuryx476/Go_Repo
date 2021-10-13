@@ -21,8 +21,11 @@ func main() {
 		// Actually reading input from user (Only one word it can read with \n)
 		userInput, _ := reader.ReadString('\n')
 
-		// Output the userInput
-		fmt.Println(userInput)
+		// Call eliza function with userInput
+		response := doctor.Response(userInput)
+
+		// Output the response from eliza
+		fmt.Println(response)
 	}
 }
 
