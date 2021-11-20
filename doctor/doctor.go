@@ -59,6 +59,8 @@ var matches = []string{
 	"quit",
 }
 
+// Notes: This is called a "Map". A Quick way of storing keys and values
+// If "am" is inputted, it is converted to "are"
 var reflections = map[string]string{
 	"am":     "are",
 	"was":    "were",
