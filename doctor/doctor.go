@@ -1,5 +1,7 @@
+// Notes: This package is usually named after the file
 package doctor
 
+// Notes: This package them does the importing of other requirements
 import (
 	"log"
 	"math/rand"
@@ -13,6 +15,7 @@ import (
 // responses are based on a Python program by Joe Strout, Jeff Epler and Jez Higgins. The Python code is available at
 // https://github.com/jezhiggins/eliza.py. This code is licensed under the terms of the MIT License.
 
+// Notes: This is called a "Slice" that holds a bunch of strings
 var matches = []string{
 	"life",
 	"i need",
