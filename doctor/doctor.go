@@ -76,6 +76,8 @@ var reflections = map[string]string{
 	"i'm":    "your",
 }
 
+// Notes: This is a "slice of slice" of strings.
+// This constructs the responses
 var responses = [][]string{
 	{"Life? Don't talk to me about life.", "At least you have a life, I'm stuck inside this computer.", "Life can be good. Remember, 'this, too, will pass'."},
 	{"Why do you need %1?", "Would it really help you to get %1?", "Are you sure you need %1?"},
@@ -120,6 +122,7 @@ var responses = [][]string{
 	{"Please tell me more.", "Let's change focus a bit... Tell me about your family.", "Can you elaborate on that?", "Why do you say that %1?", "I see.", "Very interesting.", "%1?", "I see.  And what does that tell you?", "How does that make you feel?", "How do you feel when you say that?"},
 }
 
+// Notes: Using the ` can help make a string on multiple lines
 // Intro returns the intro text
 func Intro() string {
 	return `
